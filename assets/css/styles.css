@@ -1,0 +1,171 @@
+    body {
+        font-family: "Inter", sans-serif;
+        opacity: 1;
+        width: 100%;
+        display: block;
+    }
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#111;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+    .bg {
+        position: fixed;
+        inset: 0;
+        width: 200%;
+        height: 100%;
+        left: -50%;
+        animation: slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, rgb(245, 245, 245) 50%, rgb(250, 250, 250) 50%);
+        opacity: .5;
+        z-index: -1;
+    }
+
+    .bg2 {
+        animation-direction: alternate-reverse;
+        animation-duration: 4s;
+    }
+
+    #hero-txt1 span {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(80px);
+        animation: dropIn 0.7s cubic-bezier(.22, 1, .36, 1) forwards;
+        will-change: transform, opacity;
+    }
+
+    @keyframes dropIn {
+        0% {
+            opacity: 0;
+            transform: translateY(80px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #p-img {
+        opacity: 0;
+        transform: translateY(40px);
+        animation: imgFade 0.7s ease forwards;
+    }
+
+    @keyframes imgFade {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(-25%);
+        }
+
+        100% {
+            transform: translateX(25%);
+        }
+    }
+
+    @keyframes dropIn {
+        0% {
+            opacity: 0;
+            transform: translateY(80px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    #sidebar-overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    @media screen and (width: 150px) {
+        body {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            font-family: "Inter", sans-serif;
+            opacity: 1;
+            width: 100%;
+            display: block;
+        }
+
+        .bg {
+            position: fixed;
+            inset: 0;
+            width: 200%;
+            height: 100%;
+            left: -50%;
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, rgb(245, 245, 245) 50%, rgb(250, 250, 250) 50%);
+            opacity: .5;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+
+        #hero-txt span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(80px);
+            animation: dropIn 0.7s cubic-bezier(.22, 1, .36, 1) forwards;
+            will-change: transform, opacity;
+        }
+
+        @keyframes dropIn {
+            0% {
+                opacity: 0;
+                transform: translateY(80px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #p-img {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: imgFade 0.7s ease forwards;
+        }
+
+        @keyframes imgFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(25%);
+            }
+        }
+    }

@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Muhammad Mahfudli A - Web Developer Portfolio">
+    <meta name="description" content="Portfolio website dari M. Mahfudli A. Web Developer, Backend Developer, dan Freelancer yang fokus pada pengembangan aplikasi web modern.">
+    <meta name="keywords" content="web developer, backend developer, portfolio, programmer indonesia, freelance web developer">
+    <meta name="author" content="MAHFUDLI">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mahfudli - personal portfolio">
+    <meta property="og:description" content="Portfolio Web Developer, Backend Developer, dan Freelancer">
+    <meta property="og:image" content="https://scontent.fsub7-1.fna.fbcdn.net/v/t39.30808-6/472465907_1179336723788967_597655336170989397_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=2a1932&_nc_ohc=iV_3a_9SVBUQ7kNvwE5hF7F&_nc_oc=AdltRVpc1ZAeE_EWIn_SLK4M_Mi38KXZaQi0GovA9SBIv4MM3h2oMOIqG6b0_ZOnW4eEYrBPu-j6DAzZkg0tY7Cj&_nc_zt=23&_nc_ht=scontent.fsub7-1.fna&_nc_gid=g7wP6ag_VAvt4ardzblY1w&_nc_ss=8&oh=00_Afxh2Kl_l_FzEJjCwjZM0zdwXWjLYOJ-u3kkxuylEZaRNg&oe=69B5ED7C">
+    <meta property="og:url" content="https://mahfudli.xo.je">
+    <meta property="og:site_name" content="Portfolio">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/637/637455.png">
+    <meta name="theme-color" content="#000000">
+    <title>PORTOFOLIO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/txt.prop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/EasePack.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomEase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomBounce.min.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/CustomWiggle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <div id="loader">
+        <h2>Loading assets...</h2>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            if (localStorage.getItem("assetsLoaded")) {
+                $("#loader").hide();
+            }
+
+        });
+        $(window).on("load", function () {
+            if (!localStorage.getItem("assetsLoaded")) {
+                localStorage.setItem("assetsLoaded", "true");
+                location.reload();
+            }
+        });
+    </script>
+    <!--
+    ===== [ DESKTOP CONTAINER ] =====
+    -->
+    <main id="content">
+        <div class="hidden" id="popup">
+            <div class="fixed inset-0 backdrop-blur-sm flex justify-center items-center bg-black bg-opacity-50 z-50">
+                <div class="w-[300px] max-w-full max-h-[100vh] bg-white rounded shadow-lg p-4 overflow-auto">
+                    <h2 class="text-lg font-bold mb-8">Contact Me</h2>
+                    <div class="p-2 space-y-5">
+                        <a href="https://wa.me/62881036812393">
+                            <button
+                                class="w-full p-3 bg-white text-left border-2 border-black hover:bg-black hover:text-white">
+                                <i class="fa-brands fa-whatsapp text-2xl mr-6"></i>
+                                <b class="-mt-10">Whatsapp</b>
+                            </button>
+                        </a>
+                        <br><br>
+                        <a href="mailto:mmahfudlia7@gmail.com">
+                            <button
+                                class="w-full p-3 bg-white text-left border-2 border-black hover:bg-black hover:text-white">
+                                <i class="fa-regular fa-envelope text-2xl mr-6"></i>
+                                <b class="-mt-10">Email</b>
+                            </button>
+                        </a>
+                    </div>
+                    <button class="mt-4 px-4 py-2 bg-black text-white rounded" onclick="close_popup()">Close</button>
+                </div>
+            </div>
+        </div>
+        <div id="all-element" class="lg:block md:block hidden">
+            <section id="navbar"
+                class="sticky top-0 z-40 p-5 backdrop-blur-md bg-white/60 border-b border-gray-200 mb-24">
+                <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+                    <div class="font-bold text-lg tracking-wide">
+                        <i class="fa-solid fa-laptop-code text-2xl"></i>
+                    </div>
+                    <div class="flex items-center gap-8 text-sm font-medium">
+                        <a href="#home" class="hover:text-black text-gray-600 transition">Home</a>
+                        <a href="#skills" class="hover:text-black text-gray-600 transition">Skills</a>
+                        <a href="#techstack" class="hover:text-black text-gray-600 transition">Tech Stack</a>
+                        <a href="#social" class="hover:text-black text-gray-600 transition">Social</a>
+                    </div>
+                </nav>
+            </section>
+            <section id="home" class="p-6 relative flex justify-center items-center mb-14">
+                <div class="bg"></div>
+                <div class="bg bg2"></div>
+                <div class="bg bg3"></div>
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between gap-16 max-w-5xl w-full md:p-8 lg:p-1 p-0.5">
+                    <div class="text-center md:text-left space-y-5">
+                        <h1 class="md:text-5xl lg:text-6xl font-bold" id="hero-txt1"></h1>
+                        <p class="text-gray-600 text-sm">
+                            Web Developer • Backend • Freelancer
+                        </p>
+                        <div class="flex gap-6 justify-center md:justify-start">
+                            <a href="http://github.com/Akhmat31/" class="inline-block bg-black text-white px-6 py-2"
+                                style="box-shadow:5px 5px 0px rgb(245,245,245),6px 6px 0px 2px rgb(0,0,0);">
+                                My Project
+                            </a>
+                            <button onclick="contact()" class="border border-[#212121] px-6 py-2"
+                                style="box-shadow:7px 7px 0px black;">
+                                Contact
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-lg bg-gray-400 w-[280px] h-[280px] flex-shrink-0"
+                        style="box-shadow:5px 5px 0px rgb(245,245,245),6px 6px 0px 2px rgb(0,0,0);" id="p-img">
+                        <div class="">
+                            <img src="https://scontent.fsub7-1.fna.fbcdn.net/v/t1.6435-1/104975962_163921525330497_3618813414092200390_n.jpg?stp=c0.256.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=QT3p2sdevsIQ7kNvwHFh4yA&_nc_oc=AdlpQJEUSeDQ6Jgtte2IE3agu4NFMOtSrIOUyK9o72sghjLRNlNIttKN0wZ0Ef8oQxw80MoL1tBg2JO1BNzRKG6Z&_nc_zt=24&_nc_ht=scontent.fsub7-1.fna&_nc_gid=fyJhIqmS0QrqRyC7zggcOg&_nc_ss=8&oh=00_AfxMpKm1EwWNMlnWjSp44Kwdpv3UBoxjdXf19H44grI9kg&oe=69D7ABF1"
+                                class="w-full rounded-lg" alt="Profile" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="max-w-6xl mx-auto mt-32 mb-24 p-8 flex flex-col md:flex-row gap-16">
+                <main class="flex-1 flex flex-col items-left">
+                    <div class="mb-10">
+                        <h1 class="text-2xl font-bold">Short about me</h1>
+                        <p class="text-sm italic">Name: Muhammad Mahfudli Asy'ari</p>
+                    </div>
+
+                    <div class="max-w-[400px]">
+                        <p id="d-sa-d"></p>
+                        <p id="d-sa-d_2" class="mt-5"></p>
+                    </div>
+                </main>
+                <div class="flex-1">
+                    <div id="skills" class="text-center mb-10">
+                        <h1 class="font-bold text-2xl">Skills</h1>
+                        <p class="text-xs">My skills overview</p>
+                    </div>
+                    <div id="resolv" class="relative">
+                        <div class="absolute left-[0.4rem] top-0 h-full w-[2px] bg-black"></div>
+                        <div class="space-y-10">
+                            <div class="flex items-start gap-6">
+                                <div class="relative z-10 -left-[0.1px]">
+                                    <div class="w-4 h-4 bg-white border-4 border-black mt-6"></div>
+                                </div>
+                                <div id="la" class="flex gap-7 p-6 border-2 border-black w-full">
+                                    <div class="text-white">
+                                        <i class="bg-black p-5 fa-solid fa-network-wired"></i>
+                                    </div>
+                                    <div>
+                                        <h1 id="j1" class="font-bold"></h1>
+                                        <div class="w-1/2 h-[1px] bg-black mt-2 mb-3"></div>
+                                        <p id="d1" class="text-sm">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6">
+                                <div class="relative z-10 -left-[0.1px]">
+                                    <div class="w-4 h-4 bg-white border-4 border-black mt-6"></div>
+                                </div>
+                                <div id="la" class="flex gap-7 p-6 border-2 border-black w-full">
+                                    <div class="text-white">
+                                        <i class="bg-black p-5 fa-solid fa-code"></i>
+                                    </div>
+                                    <div>
+                                        <h1 id="j2" class="font-bold"></h1>
+                                        <div class="w-1/2 h-[1px] bg-black mt-2 mb-3"></div>
+                                        <p id="d2" class="text-sm">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6">
+
+                                <div class="relative z-10 -left-[0.1px]">
+                                    <div class="w-4 h-4 bg-white border-4 border-black mt-6"></div>
+                                </div>
+
+                                <div id="la" class="flex gap-7 p-6 border-2 border-black w-full">
+                                    <div class="text-white">
+                                        <i class="bg-black p-5 fa-solid fa-desktop"></i>
+                                    </div>
+                                    <div>
+                                        <h1 id="j3" class="font-bold"></h1>
+                                        <div class="w-1/2 h-[1px] bg-black mt-2 mb-3"></div>
+                                        <p id="d3" class="text-sm">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="techstack">
+                <div class="text-center mb-14">
+                    <h1 class="text-2xl font-bold">Tech Stack</h1>
+                    <p class="text-xs">Tech stack i use for build apps</p>
+                </div>
+                <div class="flex flex-wrap justify-center p-4 gap-7 mb-16">
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-brands fa-laravel"></div>
+                        <p class="text-sm font-mono">Laravel</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-brands fa-react"></div>
+                        <p class="text-sm font-mono">React</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-brands fa-vuejs"></div>
+                        <p class="text-sm font-mono">Vue</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-brands fa-symfony"></div>
+                        <p class="text-sm font-mono">Symfony</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-solid fa-fire"></div>
+                        <p class="text-sm font-mono">CodeIgniter</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-solid fa-code"></div>
+                        <p class="text-sm font-mono">jQuery</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-solid fa-leaf"></div>
+                        <p class="text-sm font-mono">Spring Boot</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-solid fa-mountain"></div>
+                        <p class="text-sm font-mono">Alpine JS</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-4xl fa-brands fa-tailwind-css"></div>
+                        <p class="text-sm font-mono">Tailwind</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="ml-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" fill="currentColor"
+                                class="bi bi-filetype-sql" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5z" />
+                            </svg>
+                        </div>
+                        <p class="text-sm mt-0.5 font-mono">MySQL</p>
+                    </div>
+                </div>
+            </section>
+            <section id="social" class="mb-12">
+                <div class="text-center mb-1">
+                    <h1 class="text-2xl font-bold">Find me!</h1>
+                    <p class="text-xs">You can find me on</p>
+                </div>
+                <div class="p-8 flex justify-center gap-10">
+                    <div class="text-white">
+                        <a href="https://www.facebook.com/fudinmuhammad.fudinmuhammad/">
+                            <i id="fb" class="bg-black text-2xl p-5 fa-brands fa-facebook rounded-md"
+                                style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+                    <div class="text-white">
+                        <i id="ld" class="bg-black text-2xl p-5 fa-brands fa-linkedin rounded-md"
+                            style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                    </div>
+                    <div class="text-white">
+                        <a href="https://tiktok.com/@hamz0346">
+                            <i id="tt" class="bg-black text-2xl p-5 fab fa-tiktok rounded-md"
+                                style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="mb-12 p-5 text-center flex flex-col justify-center items-center">
+                    <h1 class="text-2xl font-bold mb-2">Short notes</h1>
+
+                    <div class="max-w-[50vw] mx-auto">
+                        <p id="e-sa-d">
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <footer class="lg:block md:block hidden bg-black text-white mt-10">
+            <div class="p-6 text-center space-y-6">
+                <div>
+                    <h1 class="font-bold text-lg">M. Mahfudli. A</h1>
+                    <p class="text-xs text-gray-400">Web Developer • Backend • Freelancer</p>
+                </div>
+                <div class="flex justify-center gap-6 text-xs">
+                    <a href="#home" class="hover:text-gray-300">Home</a>
+                    <a href="#skills" class="hover:text-gray-300">Skills</a>
+                    <a href="#techstack" class="hover:text-gray-300">Tech Stack</a>
+                    <a onclick="contact()" class="hover:text-gray-300">Contact</a>
+                </div>
+                <div class="flex justify-center gap-6 text-lg">
+                    <a href="http://github.com/Akhmat31/"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/fudinmuhammad.fudinmuhammad/"><i
+                            class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="w-full h-[1px] bg-gray-700"></div>
+                <div class="text-sm text-gray-400">
+                    © 2026 Mahfudli. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!--
+    ===== [ MOBILE CONTAINER ] =====
+    -->
+    <main id="content">
+        <div id="sidebar-overlay" onclick="close_sidebar()"
+            class="hidden overflow-scroll fixed inset-0 bg-black bg-opacity-50 z-40 cursor-pointer" style="opacity: 0;">
+        </div>
+        <div id="sidebar"
+            class="overflow-scroll lg:hidden md:hidden fixed top-0 z-50 left-0 w-64 h-full bg-white shadow-2xl"
+            style="transform: translateX(-100%);">
+            <div class="flex flex-col h-full">
+                <div class="flex justify-between items-center px-6 py-5 border-b border-gray-100">
+                    <h2 class="text-lg font-bold tracking-wide">Menu</h2>
+                    <button onclick="close_sidebar()"
+                        class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-xl transition-all duration-300 hover:rotate-90">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+                <nav class="flex-1 px-4 py-6 space-y-1">
+                    <a href="#home"
+                        class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg font-medium bg-black text-white transition-all duration-200">
+                        <i class="fa-solid fa-house w-4 text-center"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#skills"
+                        class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition-all duration-200">
+                        <i class="fa-solid fa-lightbulb w-4 text-center"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#techstack"
+                        class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition-all duration-200">
+                        <i class="fa-solid fa-layer-group w-4 text-center"></i>
+                        <span>Tech Stack</span>
+                    </a>
+                    <a href="#social"
+                        class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition-all duration-200">
+                        <i class="fa-solid fa-share-nodes w-4 text-center"></i>
+                        <span>Find Me</span>
+                    </a>
+                    <button onclick="contact(); close_sidebar();"
+                        class="w-full flex items-center gap-3 px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition-all duration-200">
+                        <i class="fa-solid fa-envelope w-4 text-center"></i>
+                        <span>Contact</span>
+                    </button>
+                </nav>
+                <div class="px-6 py-4 border-t border-gray-100 text-xs text-gray-400 text-center">
+                    © 2026 Mahfudli
+                </div>
+            </div>
+        </div>
+        <div class="hidden" id="popup">
+            <div class="fixed inset-0 backdrop-blur-sm flex justify-center items-center bg-black bg-opacity-50 z-50">
+                <div class="w-[300px] max-w-full max-h-[100vh] bg-white rounded shadow-lg p-4 overflow-auto">
+                    <h2 class="text-lg font-bold mb-8">Contact Me</h2>
+                    <div class="p-2 space-y-5">
+                        <a href="https://wa.me/62881036812393">
+                            <button
+                                class="w-full p-3 bg-white text-left border-2 border-black hover:bg-black hover:text-white">
+                                <i class="fa-brands fa-whatsapp text-2xl mr-6"></i>
+                                <b class="-mt-10">Whatsapp</b>
+                            </button>
+                        </a>
+                        <br><br>
+                        <a href="mailto:mmahfudlia7@gmail.com">
+                            <button
+                                class="w-full p-3 bg-white text-left border-2 border-black hover:bg-black hover:text-white">
+                                <i class="fa-regular fa-envelope text-2xl mr-6"></i>
+                                <b class="-mt-10">Email</b>
+                            </button>
+                        </a>
+                    </div>
+                    <button class="mt-4 px-4 py-2 bg-black text-white rounded" onclick="close_popup()">Close</button>
+                </div>
+            </div>
+        </div>
+        <div id="all-element" class="lg:hidden md:hidden">
+            <section id="navbar" class="sticky top-0 z-40 backdrop-blur-sm">
+                <main class="bg-transparent">
+                    <nav class="p-8 flex justify-between">
+                        <div class="flex justify-start">
+                            <i onclick="show_sidebar()"
+                                class="fa-solid fa-bars text-2xl cursor-pointer hover:scale-110 transition-transform"></i>
+                        </div>
+                        <div class="-mt-0.5">
+                            <i class="fa-solid fa-laptop-code text-2xl"></i>
+                        </div>
+                    </nav>
+                </main>
+            </section>
+            <section id="home" class="p-6 -mt-2 flex justify-center relative">
+                <div class="bg"></div>
+                <div class="bg bg2"></div>
+                <div class="bg bg3"></div>
+                <main class="absolute">
+                    <div class="p-7">
+                        <h1 class="text-2xl text-center font-bold" id="hero-txt"></h1>
+                    </div>
+                </main>
+                <main class="rounded-full bg-gray-400 mt-[140px] w-[150px] h-[150px] absolute" id="p-img"
+                    style="border: ridge 1px; box-shadow: 1px 1px 0px rgb(245, 245, 245), 2px 0px 0px 2px rgb(0, 0, 0)">
+                    <div class="">
+                        <img class="rounded-full"
+                            src="https://scontent.fsub7-1.fna.fbcdn.net/v/t1.6435-1/104975962_163921525330497_3618813414092200390_n.jpg?stp=c0.256.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=QT3p2sdevsIQ7kNvwHFh4yA&_nc_oc=AdlpQJEUSeDQ6Jgtte2IE3agu4NFMOtSrIOUyK9o72sghjLRNlNIttKN0wZ0Ef8oQxw80MoL1tBg2JO1BNzRKG6Z&_nc_zt=24&_nc_ht=scontent.fsub7-1.fna&_nc_gid=fyJhIqmS0QrqRyC7zggcOg&_nc_ss=8&oh=00_AfxMpKm1EwWNMlnWjSp44Kwdpv3UBoxjdXf19H44grI9kg&oe=69D7ABF1"
+                            alt="Profile" srcset="">
+                    </div>
+                </main>
+                <main class="mt-20">
+                    <div class="text-center mt-64 space-y-4">
+                        <p class="text-gray-600 text-sm">
+                            Web Developer • Backend • Freelancer
+                        </p>
+                        <div class="flex gap-8">
+                            <a href="http://github.com/Akhmat31/"
+                                class="btn-primary inline-block bg-black text-white px-6 py-2 border-white"
+                                style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);">
+                                <button>
+                                    My Project
+                                </button>
+                            </a>
+                            <button onclick="contact()"
+                                class="btn-secondary inline-block border border-[#212121] text-black px-6 py-2"
+                                style="box-shadow: 7px 7px 0px black;">
+                                Contact
+                            </button>
+                        </div>
+                    </div>
+                </main>
+            </section>
+            <div class="p-5 mb-10">
+                <section id="about" class="mt-10">
+                    <div class="p-5">
+                        <h1 class="text-2xl font-bold">Short about me</h1>
+                        <p class="text-xs italic">Name: Muhammad Mahfudli Asy'ari</p>
+                    </div>
+                    <div id="d-sa-d_1" class="ml-3 p-2 text-sm"></div>
+                    <div id="d-sa-d_1_2" class="ml-3 p-2 text-sm"></div>
+                </section>
+            </div>
+            <div id="skills" class="text-center mb-5">
+                <h1 class="font-bold text-2xl">Skills</h1>
+                <p class="text-xs">My skills overview</p>
+            </div>
+            <div class="p-5 space-y-10 mb-12">
+                <div class="space-x-7 flex">
+                    <div class=" text-white">
+                        <i class="bg-black p-5 fa-solid fa-network-wired"
+                            style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                    </div>
+                    <div>
+                        <h1 id="j1_1" class="font-bold"></h1>
+                        <div class="w-1/2 p-[0.8px] bg-black mt-2 mb-4"></div>
+                        <p id="d1_1" class="text-sm"></p>
+                    </div>
+                </div>
+                <div class="space-x-7 flex">
+                    <div class=" text-white">
+                        <i class="bg-black p-5 fa-solid fa-code"
+                            style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                    </div>
+                    <div>
+                        <h1 id="j2_1" class="font-bold"></h1>
+                        <div class="w-1/2 p-[1px] bg-black mt-2 mb-4"></div>
+                        <p id="d2_1" class="text-sm"></p>
+                    </div>
+                </div>
+                <div class="space-x-7 flex">
+                    <div class=" text-white">
+                        <i class="bg-black p-5 fa-solid fa-desktop"
+                            style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                    </div>
+                    <div>
+                        <h1 id="j3_1" class="font-bold"></h1>
+                        <div class="w-1/2 p-[1px] bg-black mt-2 mb-4"></div>
+                        <p id="d3_1" class="text-sm"></p>
+                    </div>
+                </div>
+            </div>
+            <section id="techstack">
+                <div class="text-center mb-14">
+                    <h1 class="text-2xl font-bold">Tech Stack</h1>
+                    <p class="text-xs">Tech stack i use for build apps</p>
+                </div>
+                <div class="flex flex-wrap justify-center p-4 gap-7 mb-16">
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-brands fa-laravel"></div>
+                        <p class="text-xs font-mono">Laravel</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-brands fa-react"></div>
+                        <p class="text-xs font-mono">React</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-brands fa-vuejs"></div>
+                        <p class="text-xs font-mono">Vue</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-brands fa-symfony"></div>
+                        <p class="text-xs font-mono">Symfony</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-solid fa-fire"></div>
+                        <p class="text-xs font-mono">CodeIgniter</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-solid fa-code"></div>
+                        <p class="text-xs font-mono">jQuery</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-solid fa-leaf"></div>
+                        <p class="text-xs font-mono">Spring Boot</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-solid fa-mountain"></div>
+                        <p class="text-xs font-mono">Alpine JS</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="text-2xl fa-brands fa-tailwind-css"></div>
+                        <p class="text-xs font-mono">Tailwind</p>
+                    </div>
+                    <div class="flex-col text-center justify-between">
+                        <div class="ml-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
+                                class="bi bi-filetype-sql" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5z" />
+                            </svg>
+                        </div>
+                        <p class="text-xs mt-0.5 font-mono">MySQL</p>
+                    </div>
+                </div>
+            </section>
+            <section id="social" class="mb-12">
+                <div class="text-center mb-1">
+                    <h1 class="text-2xl font-bold">Find me!</h1>
+                    <p class="text-xs">You can find me on</p>
+                </div>
+                <div class="p-8 flex justify-center gap-10">
+                    <div class="text-white">
+                        <a href="https://www.facebook.com/fudinmuhammad.fudinmuhammad/">
+                            <i id="fb" class="bg-black text-2xl p-5 fa-brands fa-facebook rounded-md"
+                                style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+                    <div class="text-white">
+                        <i id="ld" class="bg-black text-2xl p-5 fa-brands fa-linkedin rounded-md"
+                            style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                    </div>
+                    <div class="text-white">
+                        <a href="https://tiktok.com/@hamz0346">
+                            <i id="tt" class="bg-black text-2xl p-5 fab fa-tiktok rounded-md"
+                                style="box-shadow: 5px 5px 0px rgb(245, 245, 245), 6px 6px 0px 2px rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="text-left mb-12 p-5">
+                    <h1 class="text-2xl font-bold mb-2">Short notes</h1>
+                    <p id="e-sa-d_1" class="text-xs">
+                    </p>
+                </div>
+            </section>
+        </div>
+        <footer class="lg:hidden md:hidden bg-black text-white mt-10">
+            <div class="p-6 text-center space-y-6">
+                <div>
+                    <h1 class="font-bold text-lg">M. Mahfudli. A</h1>
+                    <p class="text-xs text-gray-400">Web Developer • Backend • Freelancer</p>
+                </div>
+                <div class="flex justify-center gap-6 text-xs">
+                    <a href="#home" class="hover:text-gray-300">Home</a>
+                    <a href="#skills" class="hover:text-gray-300">Skills</a>
+                    <a href="#techstack" class="hover:text-gray-300">Tech Stack</a>
+                    <a onclick="contact()" class="hover:text-gray-300">Contact</a>
+                </div>
+                <div class="flex justify-center gap-6 text-lg">
+                    <a href="http://github.com/Akhmat31/"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/fudinmuhammad.fudinmuhammad/"><i
+                            class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="w-full h-[1px] bg-gray-700"></div>
+                <div class="text-xs text-gray-400">
+                    © 2026 Mahfudli. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        var popup_element = null;
+        var sidebar_element = null;
+        var sidebar_overlay_element = null;
+        var navbar_element = null;
+        var hero_text_desktop_element = null;
+        var hero_text_mobile_element = null;
+
+        function resolve_dom_element_by_id(element_id_string) {
+            var resolved_element = document.getElementById(element_id_string);
+            if (resolved_element === null || typeof resolved_element === "undefined") {
+                return null;
+            }
+            if (resolved_element.nodeType !== 1) {
+                return null;
+            }
+            return resolved_element;
+        }
+
+        function initialize_all_dom_references() {
+            var element_id_to_variable_name_map = [
+                {
+                    element_id: "popup",
+                    variable_name: "popup_element"
+                },
+                {
+                    element_id: "sidebar",
+                    variable_name: "sidebar_element"
+                },
+                {
+                    element_id: "sidebar-overlay",
+                    variable_name: "sidebar_overlay_element"
+                },
+                {
+                    element_id: "navbar",
+                    variable_name: "navbar_element"
+                },
+                {
+                    element_id: "hero-txt",
+                    variable_name: "hero_text_desktop_element"
+                },
+                {
+                    element_id: "hero-txt1",
+                    variable_name: "hero_text_mobile_element"
+                }];
+
+            var resolved_reference_registry = {};
+            var total_element_count = element_id_to_variable_name_map.length;
+            var successful_resolution_count = 0;
+            var failed_resolution_id_list = [];
+
+            var iteration_index = 0;
+            while (iteration_index < total_element_count) {
+                var current_mapping_entry = element_id_to_variable_name_map[iteration_index];
+                var attempt_resolved_node = resolve_dom_element_by_id(current_mapping_entry.element_id);
+
+                if (attempt_resolved_node !== null) {
+                    resolved_reference_registry[current_mapping_entry.variable_name] = attempt_resolved_node;
+                    successful_resolution_count++;
+                }
+                else {
+                    failed_resolution_id_list.push(current_mapping_entry.element_id);
+                }
+                iteration_index++;
+            }
+
+            popup_element = resolved_reference_registry["popup_element"] || null;
+            sidebar_element = resolved_reference_registry["sidebar_element"] || null;
+            sidebar_overlay_element = resolved_reference_registry["sidebar_overlay_element"] || null;
+            navbar_element = resolved_reference_registry["navbar_element"] || null;
+            hero_text_desktop_element = resolved_reference_registry["hero_text_desktop_element"] || null;
+            hero_text_mobile_element = resolved_reference_registry["hero_text_mobile_element"] || null;
+
+            return {
+                total_registered: total_element_count,
+                total_resolved: successful_resolution_count,
+                failed_id_list: failed_resolution_id_list
+            };
+        }
+
+        initialize_all_dom_references();
+
+        function contact() {
+            if (popup_element === null || navbar_element === null) {
+                return;
+            }
+            popup_element.classList.remove("hidden");
+            navbar_element.classList.add("blur");
+        }
+
+        function close_popup() {
+            if (popup_element === null || navbar_element === null) {
+                return;
+            }
+            popup_element.classList.add("hidden");
+            navbar_element.classList.remove("blur");
+        }
+
+        var sidebar_current_state = "CLOSED";
+        var sidebar_animation_in_progress = false;
+
+        var SIDEBAR_STATE_OPEN = "OPEN";
+        var SIDEBAR_STATE_CLOSED = "CLOSED";
+
+        var SIDEBAR_ANIMATION_DURATION_SECONDS = 0.4;
+        var SIDEBAR_OVERLAY_FADE_DURATION_SECONDS = 0.3;
+        var SIDEBAR_TRANSLATE_X_HIDDEN_VALUE = "-100%";
+        var SIDEBAR_TRANSLATE_X_VISIBLE_VALUE = 0;
+
+        if (sidebar_element !== null) {
+            gsap.set(sidebar_element,
+                {
+                    x: SIDEBAR_TRANSLATE_X_HIDDEN_VALUE
+                });
+        }
+
+        function compute_sidebar_open_animation_config() {
+            return {
+                sidebar_tween_params:
+                {
+                    x: SIDEBAR_TRANSLATE_X_VISIBLE_VALUE,
+                    duration: SIDEBAR_ANIMATION_DURATION_SECONDS,
+                    ease: "power3.out"
+                },
+                overlay_tween_params:
+                {
+                    opacity: 1,
+                    duration: SIDEBAR_OVERLAY_FADE_DURATION_SECONDS
+                }
+            };
+        }
+
+        function compute_sidebar_close_animation_config() {
+            return {
+                sidebar_tween_params:
+                {
+                    x: SIDEBAR_TRANSLATE_X_HIDDEN_VALUE,
+                    duration: SIDEBAR_ANIMATION_DURATION_SECONDS,
+                    ease: "power3.in"
+                },
+                overlay_tween_params:
+                {
+                    opacity: 0,
+                    duration: SIDEBAR_OVERLAY_FADE_DURATION_SECONDS
+                }
+            };
+        }
+
+        function show_sidebar() {
+            if (sidebar_animation_in_progress === true) {
+                return;
+            }
+            if (sidebar_current_state === SIDEBAR_STATE_OPEN) {
+                return;
+            }
+            if (sidebar_element === null || sidebar_overlay_element === null) {
+                return;
+            }
+
+            sidebar_animation_in_progress = true;
+            sidebar_overlay_element.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+
+            var animation_config = compute_sidebar_open_animation_config();
+
+            gsap.to(sidebar_element, animation_config.sidebar_tween_params);
+            gsap.to(sidebar_overlay_element, animation_config.overlay_tween_params);
+
+            var max_animation_duration_ms = (SIDEBAR_ANIMATION_DURATION_SECONDS * 1000) + 50;
+            setTimeout(function sidebar_open_animation_complete_handler() {
+                sidebar_animation_in_progress = false;
+                sidebar_current_state = SIDEBAR_STATE_OPEN;
+            }, max_animation_duration_ms);
+        }
+
+        function close_sidebar() {
+            if (sidebar_animation_in_progress === true) {
+                return;
+            }
+            if (sidebar_current_state === SIDEBAR_STATE_CLOSED) {
+                return;
+            }
+            if (sidebar_element === null || sidebar_overlay_element === null) {
+                return;
+            }
+
+            sidebar_animation_in_progress = true;
+
+            var animation_config = compute_sidebar_close_animation_config();
+
+            gsap.to(sidebar_element, animation_config.sidebar_tween_params);
+
+            var overlay_tween_params_with_callback = {};
+            for (var overlay_param_key in animation_config.overlay_tween_params) {
+                if (animation_config.overlay_tween_params.hasOwnProperty(overlay_param_key)) {
+                    overlay_tween_params_with_callback[overlay_param_key] =
+                        animation_config.overlay_tween_params[overlay_param_key];
+                }
+            }
+            overlay_tween_params_with_callback.onComplete = function sidebar_close_overlay_complete_handler() {
+                sidebar_overlay_element.classList.add("hidden");
+                document.body.style.overflow = "auto";
+                sidebar_animation_in_progress = false;
+                sidebar_current_state = SIDEBAR_STATE_CLOSED;
+            };
+
+            gsap.to(sidebar_overlay_element, overlay_tween_params_with_callback);
+        }
+
+        var HERO_MAIN_TEXT_DESKTOP = "HI! Welcome\nTo My Website Portofolio";
+        var HERO_MAIN_TEXT_MOBILE = "HI! Welcome\nTo My Website\nPortofolio";
+
+        var HERO_CHARACTER_ANIMATION_STAGGER_SECONDS = 0.05;
+        var HERO_NEWLINE_TOKEN_VALUE = "\n";
+        var HERO_SPACE_CHARACTER_HTML_ENTITY = "&nbsp;";
+
+        function tokenize_text_string_into_character_token_array(raw_text_string) {
+            var character_token_array = [];
+            var total_character_count = raw_text_string.length;
+            var character_scan_index = 0;
+
+            while (character_scan_index < total_character_count) {
+                var current_raw_character = raw_text_string.charAt(character_scan_index);
+                var token_type_identifier = (current_raw_character === HERO_NEWLINE_TOKEN_VALUE) ?
+                    "newline" :
+                    "char";
+
+                character_token_array.push(
+                    {
+                        type: token_type_identifier,
+                        char_value: current_raw_character
+                    });
+
+                character_scan_index++;
+            }
+
+            return character_token_array;
+        }
+
+        function calculate_animation_delay_for_char_index(visible_char_index) {
+            var raw_delay_value = visible_char_index * HERO_CHARACTER_ANIMATION_STAGGER_SECONDS;
+            var formatted_delay = raw_delay_value.toFixed(2) + "s";
+            return formatted_delay;
+        }
+
+        function build_span_element_for_character_token(char_value, visible_char_index) {
+            var span_element_node = document.createElement("span");
+            var is_space_character = (char_value === " ");
+            span_element_node.innerHTML = is_space_character ?
+                HERO_SPACE_CHARACTER_HTML_ENTITY :
+                char_value;
+            span_element_node.style.animationDelay =
+                calculate_animation_delay_for_char_index(visible_char_index);
+            return span_element_node;
+        }
+
+        function render_text_with_staggered_span_animation(target_dom_element, raw_text_string) {
+            if (target_dom_element === null) {
+                return;
+            }
+
+            target_dom_element.innerHTML = "";
+
+            var character_token_array = tokenize_text_string_into_character_token_array(raw_text_string);
+            var total_token_count = character_token_array.length;
+
+            var token_iteration_index = 0;
+            var visible_character_counter = 0;
+
+            while (token_iteration_index < total_token_count) {
+                var current_token = character_token_array[token_iteration_index];
+
+                if (current_token.type === "newline") {
+                    target_dom_element.appendChild(document.createElement("br"));
+                }
+                else {
+                    var span_node = build_span_element_for_character_token(
+                        current_token.char_value,
+                        visible_character_counter
+                    );
+                    target_dom_element.appendChild(span_node);
+                    visible_character_counter++;
+                }
+
+                token_iteration_index++;
+            }
+        }
+
+        if (hero_text_desktop_element !== null) {
+            hero_text_desktop_element.innerHTML = "";
+        }
+        if (hero_text_mobile_element !== null) {
+            hero_text_mobile_element.innerHTML = "";
+        }
+        render_text_with_staggered_span_animation(hero_text_desktop_element, HERO_MAIN_TEXT_DESKTOP);
+        render_text_with_staggered_span_animation(hero_text_mobile_element, HERO_MAIN_TEXT_MOBILE);
+
+        var PARALLAX_SCROLL_SPEED_RATIO = 0.5;
+        var parallax_last_known_scroll_y = 0;
+        var parallax_ticking = false;
+
+        function calculate_parallax_offset_for_scroll_position(current_scroll_y_position, speed_ratio_multiplier) {
+            var raw_offset_value = current_scroll_y_position * speed_ratio_multiplier;
+            var clamped_offset_value = Math.max(0, raw_offset_value);
+            return clamped_offset_value;
+        }
+
+        function apply_parallax_transform_to_all_bg_elements() {
+            var parallax_background_element_list = document.querySelectorAll(".bg");
+            var total_parallax_element_count = parallax_background_element_list.length;
+
+            if (total_parallax_element_count === 0) {
+                return;
+            }
+
+            var computed_y_offset = calculate_parallax_offset_for_scroll_position(
+                parallax_last_known_scroll_y,
+                PARALLAX_SCROLL_SPEED_RATIO
+            );
+
+            var parallax_element_index = 0;
+            while (parallax_element_index < total_parallax_element_count) {
+                gsap.set(parallax_background_element_list[parallax_element_index],
+                    {
+                        y: computed_y_offset
+                    });
+                parallax_element_index++;
+            }
+
+            parallax_ticking = false;
+        }
+
+        window.addEventListener("scroll", function parallax_scroll_event_handler() {
+            parallax_last_known_scroll_y = window.scrollY;
+            if (!parallax_ticking) {
+                parallax_ticking = true;
+                requestAnimationFrame(apply_parallax_transform_to_all_bg_elements);
+            }
+        });
+
+        var NAVBAR_SCROLL_HIDE_THRESHOLD_PX = 80;
+        var NAVBAR_HIDE_TRANSLATE_Y_PX = -80;
+        var NAVBAR_ANIMATION_DURATION_SECONDS = 0.3;
+
+        var navbar_last_recorded_scroll_y = 0;
+        var navbar_is_currently_hidden = false;
+
+        function determine_scroll_direction_from_positions(previous_scroll_y, current_scroll_y) {
+            if (current_scroll_y > previous_scroll_y) {
+                return "DOWN";
+            }
+            if (current_scroll_y < previous_scroll_y) {
+                return "UP";
+            }
+            return "STATIONARY";
+        }
+
+        function evaluate_should_navbar_be_hidden(scroll_direction_value, current_scroll_y_value) {
+            if (scroll_direction_value !== "DOWN") {
+                return false;
+            }
+            if (current_scroll_y_value <= NAVBAR_SCROLL_HIDE_THRESHOLD_PX) {
+                return false;
+            }
+            return true;
+        }
+
+        window.addEventListener("scroll", function navbar_scroll_hide_event_handler() {
+            var current_scroll_y_snapshot = window.scrollY;
+            var detected_scroll_direction = determine_scroll_direction_from_positions(
+                navbar_last_recorded_scroll_y,
+                current_scroll_y_snapshot
+            );
+            var should_hide_navbar_flag = evaluate_should_navbar_be_hidden(
+                detected_scroll_direction,
+                current_scroll_y_snapshot
+            );
+
+            if (navbar_element !== null) {
+                if (should_hide_navbar_flag && !navbar_is_currently_hidden) {
+                    gsap.to(navbar_element,
+                        {
+                            y: NAVBAR_HIDE_TRANSLATE_Y_PX,
+                            duration: NAVBAR_ANIMATION_DURATION_SECONDS,
+                            ease: "power2.in"
+                        });
+                    navbar_is_currently_hidden = true;
+                }
+                else if (!should_hide_navbar_flag && navbar_is_currently_hidden) {
+                    gsap.to(navbar_element,
+                        {
+                            y: 0,
+                            duration: NAVBAR_ANIMATION_DURATION_SECONDS,
+                            ease: "power2.out"
+                        });
+                    navbar_is_currently_hidden = false;
+                }
+            }
+
+            navbar_last_recorded_scroll_y = current_scroll_y_snapshot;
+        });
+
+        var ACTIVE_LINK_SCROLL_OFFSET_PX = 100;
+        var ACTIVE_LINK_ACTIVE_BG_CLASS = "bg-black";
+        var ACTIVE_LINK_ACTIVE_TEXT_CLASS = "text-white";
+        var ACTIVE_LINK_INACTIVE_TEXT_CLASS = "text-gray-700";
+
+        function collect_section_offset_data_into_registry(section_node_list) {
+            var section_offset_data_registry = [];
+            var total_section_count = section_node_list.length;
+            var section_iteration_index = 0;
+
+            while (section_iteration_index < total_section_count) {
+                var section_node_ref = section_node_list[section_iteration_index];
+                var raw_offset_top_value = section_node_ref.offsetTop;
+                var adjusted_offset_top_value = raw_offset_top_value - ACTIVE_LINK_SCROLL_OFFSET_PX;
+
+                section_offset_data_registry.push(
+                    {
+                        element_id: section_node_ref.getAttribute("id"),
+                        offset_top_px: adjusted_offset_top_value
+                    });
+
+                section_iteration_index++;
+            }
+
+            return section_offset_data_registry;
+        }
+
+        function resolve_currently_active_section_id_from_scroll_position(section_offset_registry, current_scroll_y_value) {
+            var resolved_active_section_id = null;
+            var total_registry_entry_count = section_offset_registry.length;
+            var registry_scan_index = 0;
+
+            while (registry_scan_index < total_registry_entry_count) {
+                var registry_entry = section_offset_registry[registry_scan_index];
+                if (current_scroll_y_value >= registry_entry.offset_top_px) {
+                    resolved_active_section_id = registry_entry.element_id;
+                }
+                registry_scan_index++;
+            }
+
+            return resolved_active_section_id;
+        }
+
+        function apply_active_class_state_to_sidebar_link_nodes(sidebar_link_node_list, active_section_id_value) {
+            var total_link_count = sidebar_link_node_list.length;
+            var link_iteration_index = 0;
+            var active_href_target = active_section_id_value ? ("#" + active_section_id_value) : null;
+
+            while (link_iteration_index < total_link_count) {
+                var current_link_node = sidebar_link_node_list[link_iteration_index];
+                current_link_node.classList.remove(ACTIVE_LINK_ACTIVE_BG_CLASS, ACTIVE_LINK_ACTIVE_TEXT_CLASS);
+                current_link_node.classList.add(ACTIVE_LINK_INACTIVE_TEXT_CLASS);
+                link_iteration_index++;
+            }
+
+            if (active_href_target === null) {
+                return;
+            }
+
+            link_iteration_index = 0;
+            while (link_iteration_index < total_link_count) {
+                var candidate_link_node = sidebar_link_node_list[link_iteration_index];
+                var candidate_href_value = candidate_link_node.getAttribute("href");
+                if (candidate_href_value === active_href_target) {
+                    candidate_link_node.classList.add(ACTIVE_LINK_ACTIVE_BG_CLASS, ACTIVE_LINK_ACTIVE_TEXT_CLASS);
+                    candidate_link_node.classList.remove(ACTIVE_LINK_INACTIVE_TEXT_CLASS);
+                }
+                link_iteration_index++;
+            }
+        }
+
+        var all_tracked_section_node_list = document.querySelectorAll("section[id], div[id]");
+        var all_sidebar_link_node_list = document.querySelectorAll(".sidebar-link");
+
+        window.addEventListener("scroll", function active_link_scroll_tracker_event_handler() {
+            var section_offset_snapshot = collect_section_offset_data_into_registry(all_tracked_section_node_list);
+            var active_section_id = resolve_currently_active_section_id_from_scroll_position(
+                section_offset_snapshot,
+                window.scrollY
+            );
+            apply_active_class_state_to_sidebar_link_nodes(all_sidebar_link_node_list, active_section_id);
+        });
+
+        var SIDEBAR_CLOSE_BEFORE_SCROLL_DELAY_MS = 400;
+
+        function find_first_visible_dom_element_from_node_list(candidate_node_list) {
+            var total_candidate_count = candidate_node_list.length;
+            var candidate_scan_index = 0;
+            var first_visible_element = null;
+
+            while (candidate_scan_index < total_candidate_count) {
+                var current_candidate_element = candidate_node_list[candidate_scan_index];
+                if (current_candidate_element.offsetParent !== null) {
+                    first_visible_element = current_candidate_element;
+                    break;
+                }
+                candidate_scan_index++;
+            }
+
+            return first_visible_element;
+        }
+
+        function build_smooth_scroll_anchor_click_handler() {
+            return function anchor_click_event_handler(click_event_object) {
+                click_event_object.preventDefault();
+
+                var anchor_href_attribute_value = this.getAttribute("href");
+                var matching_element_node_list = document.querySelectorAll(anchor_href_attribute_value);
+                var resolved_visible_target = find_first_visible_dom_element_from_node_list(
+                    matching_element_node_list
+                );
+
+                if (resolved_visible_target === null) {
+                    return;
+                }
+
+                close_sidebar();
+
+                setTimeout(function delayed_smooth_scroll_executor() {
+                    resolved_visible_target.scrollIntoView(
+                        {
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                }, SIDEBAR_CLOSE_BEFORE_SCROLL_DELAY_MS);
+            };
+        }
+
+        function attach_smooth_scroll_handler_to_all_anchor_links() {
+            var all_hash_anchor_link_node_list = document.querySelectorAll("a[href^='#']");
+            var total_anchor_link_count = all_hash_anchor_link_node_list.length;
+            var anchor_binding_index = 0;
+            var shared_click_handler_function = build_smooth_scroll_anchor_click_handler();
+
+            while (anchor_binding_index < total_anchor_link_count) {
+                all_hash_anchor_link_node_list[anchor_binding_index].addEventListener(
+                    "click",
+                    shared_click_handler_function
+                );
+                anchor_binding_index++;
+            }
+        }
+
+        window.addEventListener("load", function window_load_complete_event_handler() {
+
+            gsap.to("body",
+                {
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.inOut"
+                });
+
+            var resolv_skill_card_element = resolve_dom_element_by_id("resolv");
+
+            if (resolv_skill_card_element !== null) {
+                resolv_skill_card_element.addEventListener("mouseenter", function resolv_mouseenter_handler() {
+                    gsap.to(resolv_skill_card_element,
+                        {
+                            y: -10,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                });
+                resolv_skill_card_element.addEventListener("mouseleave", function resolv_mouseleave_handler() {
+                    gsap.to(resolv_skill_card_element,
+                        {
+                            y: 0,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                });
+            }
+
+            var all_cta_button_node_list = document.querySelectorAll(".btn-primary, .btn-secondary");
+
+            gsap.from(all_cta_button_node_list,
+                {
+                    y: 50,
+                    opacity: 0,
+                    stagger: 0.2,
+                    duration: 3,
+                    ease: "power3.out"
+                });
+
+            var tech_stack_item_node_list = document.querySelectorAll("#techstack .flex-col");
+            var total_tech_item_count = tech_stack_item_node_list.length;
+
+            gsap.from(tech_stack_item_node_list,
+                {
+                    scale: 0,
+                    opacity: 0,
+                    stagger: 0.1,
+                    duration: 0.8,
+                    ease: "elastic.out(1, 0.5)",
+                    scrollTrigger:
+                    {
+                        trigger: "#techstack",
+                        start: "top 75%"
+                    }
+                });
+
+            var tech_item_binding_index = 0;
+            while (tech_item_binding_index < total_tech_item_count) {
+                (function create_tech_item_hover_closure(tech_item_element_ref) {
+                    tech_item_element_ref.addEventListener("mouseenter", function tech_item_mouseenter_handler() {
+                        gsap.to(tech_item_element_ref,
+                            {
+                                scale: 1.2,
+                                duration: 0.4,
+                                ease: "back.out(1.7)"
+                            });
+                        var inner_div_element = tech_item_element_ref.querySelector("div");
+                        if (inner_div_element !== null) {
+                            gsap.to(inner_div_element,
+                                {
+                                    rotation: 20,
+                                    duration: 0.4
+                                });
+                        }
+                    });
+                    tech_item_element_ref.addEventListener("mouseleave", function tech_item_mouseleave_handler() {
+                        gsap.to(tech_item_element_ref,
+                            {
+                                scale: 1,
+                                duration: 0.4,
+                                ease: "back.out(1.7)"
+                            });
+                        var inner_div_element = tech_item_element_ref.querySelector("div");
+                        if (inner_div_element !== null) {
+                            gsap.to(inner_div_element,
+                                {
+                                    rotation: 0,
+                                    duration: 0.4
+                                });
+                        }
+                    });
+                })(tech_stack_item_node_list[tech_item_binding_index]);
+
+                tech_item_binding_index++;
+            }
+
+            var social_icon_node_list = document.querySelectorAll("#fb, #ld, #tt");
+            var total_social_icon_count = social_icon_node_list.length;
+
+            gsap.from(social_icon_node_list,
+                {
+                    y: 10,
+                    opacity: 0,
+                    stagger: 0.2,
+                    duration: 1,
+                    ease: "back.out(1.5)",
+                    scrollTrigger:
+                    {
+                        trigger: "section:nth-of-type(4)",
+                        start: "top 80%"
+                    }
+                });
+
+            var social_icon_binding_index = 0;
+            while (social_icon_binding_index < total_social_icon_count) {
+                (function create_social_icon_hover_and_float_closure(social_icon_element_ref, icon_position_index) {
+                    social_icon_element_ref.addEventListener("mouseenter", function social_icon_mouseenter_handler() {
+                        gsap.to(social_icon_element_ref,
+                            {
+                                y: -15,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        gsap.to(social_icon_element_ref,
+                            {
+                                rotation: 360,
+                                duration: 0.6,
+                                ease: "back.out"
+                            });
+                        gsap.to(social_icon_element_ref,
+                            {
+                                scale: 1.15,
+                                duration: 0.2
+                            });
+                    });
+                    social_icon_element_ref.addEventListener("mouseleave", function social_icon_mouseleave_handler() {
+                        gsap.to(social_icon_element_ref,
+                            {
+                                y: 0,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            });
+                        gsap.to(social_icon_element_ref,
+                            {
+                                scale: 1,
+                                rotation: 0,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            });
+                    });
+
+                    gsap.to(social_icon_element_ref,
+                        {
+                            y: -5,
+                            duration: 2,
+                            ease: "sine.inOut",
+                            repeat: -1,
+                            yoyo: true,
+                            delay: icon_position_index * 0.2
+                        });
+
+                })(social_icon_node_list[social_icon_binding_index], social_icon_binding_index);
+
+                social_icon_binding_index++;
+            }
+            attach_smooth_scroll_handler_to_all_anchor_links();
+        });
+    </script>
+</body>
+</html>
