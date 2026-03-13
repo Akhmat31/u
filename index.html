@@ -60,7 +60,8 @@
 </head>
 <body>
     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5Q89RTR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5Q89RTR" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
     </noscript>
     <div id="loader">
         <h2>Loading assets...</h2>
@@ -129,13 +130,13 @@
                 <div class="bg bg2"></div>
                 <div class="bg bg3"></div>
                 <div
-                    class="flex flex-col md:flex-row items-center justify-between gap-16 max-w-5xl w-full md:p-8 lg:p-1 p-0.5">
-                    <div class="text-center md:text-left space-y-5">
-                        <h1 class="md:text-5xl lg:text-6xl font-bold" id="hero-txt1"></h1>
+                    class="flex justify-center items-center md:flex-row items-center gap-16 max-w-5xl w-full md:p-8 lg:p-1 p-0.5">
+                    <div class="text-center space-y-5">
+                        <h1 class="md:text-7xl lg:text-8xl font-bold" id="hero-txt1"></h1>
                         <p class="text-gray-600 text-sm">
                             Web Developer • Backend • Freelancer
                         </p>
-                        <div class="flex gap-6 justify-center md:justify-start">
+                        <div class="flex gap-6 justify-center">
                             <a href="http://github.com/Akhmat31/" class="inline-block bg-black text-white px-6 py-2"
                                 style="box-shadow:5px 5px 0px rgb(245,245,245),6px 6px 0px 2px rgb(0,0,0);">
                                 My Project
@@ -146,13 +147,13 @@
                             </button>
                         </div>
                     </div>
-                    <div class="rounded-lg bg-gray-400 w-[280px] h-[280px] flex-shrink-0"
+                    <!-- <div class="rounded-lg bg-gray-400 w-[280px] h-[280px] flex-shrink-0"
                         style="box-shadow:5px 5px 0px rgb(245,245,245),6px 6px 0px 2px rgb(0,0,0);" id="p-img">
-                        <div class="">
+                         <div class="">
                             <img src="https://scontent.fsub7-1.fna.fbcdn.net/v/t1.6435-1/104975962_163921525330497_3618813414092200390_n.jpg?stp=c0.256.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=QT3p2sdevsIQ7kNvwHFh4yA&_nc_oc=AdlpQJEUSeDQ6Jgtte2IE3agu4NFMOtSrIOUyK9o72sghjLRNlNIttKN0wZ0Ef8oQxw80MoL1tBg2JO1BNzRKG6Z&_nc_zt=24&_nc_ht=scontent.fsub7-1.fna&_nc_gid=fyJhIqmS0QrqRyC7zggcOg&_nc_ss=8&oh=00_AfxMpKm1EwWNMlnWjSp44Kwdpv3UBoxjdXf19H44grI9kg&oe=69D7ABF1"
                                 class="w-full rounded-lg" alt="Profile" srcset="">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
             <section class="max-w-6xl mx-auto mt-32 mb-24 p-8 flex flex-col md:flex-row gap-16">
@@ -442,13 +443,16 @@
                         <h1 class="text-2xl text-center font-bold" id="hero-txt"></h1>
                     </div>
                 </main>
-                <main class="rounded-full bg-gray-400 mt-[140px] w-[150px] h-[150px] absolute" id="p-img"
-                    style="border: ridge 1px; box-shadow: 1px 1px 0px rgb(245, 245, 245), 2px 0px 0px 2px rgb(0, 0, 0)">
-                    <div class="">
-                        <img class="rounded-full"
+                <main class="absolute mt-[140px] w-[160px] h-[160px] rounded-full p-[4px] 
+bg-gradient-to-tr from-gray-800 via-gray-600 to-gray-500
+shadow-[0_10px_25px_rgba(0,0,0,0.4)]" id="p-img">
+
+                    <div class="w-full h-full rounded-full overflow-hidden bg-gray-900">
+                        <img class="w-full h-full object-cover"
                             src="https://scontent.fsub7-1.fna.fbcdn.net/v/t1.6435-1/104975962_163921525330497_3618813414092200390_n.jpg?stp=c0.256.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=QT3p2sdevsIQ7kNvwHFh4yA&_nc_oc=AdlpQJEUSeDQ6Jgtte2IE3agu4NFMOtSrIOUyK9o72sghjLRNlNIttKN0wZ0Ef8oQxw80MoL1tBg2JO1BNzRKG6Z&_nc_zt=24&_nc_ht=scontent.fsub7-1.fna&_nc_gid=fyJhIqmS0QrqRyC7zggcOg&_nc_ss=8&oh=00_AfxMpKm1EwWNMlnWjSp44Kwdpv3UBoxjdXf19H44grI9kg&oe=69D7ABF1"
-                            alt="Profile" srcset="">
+                            alt="Profile">
                     </div>
+
                 </main>
                 <main class="mt-20">
                     <div class="text-center mt-64 space-y-4">
